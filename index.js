@@ -4,7 +4,6 @@ dotenv.config();
 import express from "express";
 import { MongoClient } from "mongodb";
 
-// dotenv.config();
 const app = express();
 console.log(process.env.MONGO_URL);
 
@@ -17,7 +16,7 @@ await client.connect();
 console.log("Mongo is connected !!!  ");
 
 app.get("/", function (request, response) {
-  response.send("🙋‍♂️,jeeva");
+  response.send("<h1>✨🎉WELCOME TO HALL BOKKING API✨🎉<h1>");
 });
 
 app.post("/createroom", express.json(), function (request, response) {
